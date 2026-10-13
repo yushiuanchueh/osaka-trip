@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>大阪・京都・奈良 五日小旅行</title>
+<link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFFCF6;--ink:#3E3A39;--coral:#F2A497;--yellow:#F6D27A;--sky:#A8D3E6;--green:#B9DAA5;--r:24px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));height:auto;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Huninn","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.6;font-size:16px}
+.wrap{max-width:560px;margin:0 auto;padding:0 16px}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:var(--bg);border-bottom:3px solid var(--ink);padding:env(safe-area-inset-top,0px) 0 0}
+nav .in{max-width:560px;margin:0 auto;display:flex;gap:6px;padding:8px 12px;overflow-x:auto}
+nav a{flex:1 0 auto;text-align:center;color:var(--ink);text-decoration:none;border:3px solid var(--ink);border-radius:999px;padding:4px 12px;font-size:15px;background:var(--bg)}
+nav a:nth-child(1){background:var(--coral)}nav a:nth-child(2){background:var(--sky)}nav a:nth-child(3){background:var(--yellow)}nav a:nth-child(4){background:var(--green)}nav a:nth-child(5){background:var(--coral)}
+nav a:focus-visible,button:focus-visible{outline:3px dashed var(--ink);outline-offset:2px}
+main{padding-top:calc(64px + env(safe-area-inset-top,0px))}
+section{padding:22px 0 8px}
+h1{font-size:30px;line-height:1.25;margin:10px 0 4px;text-align:center}
+h2{font-size:22px;margin:0 0 12px;display:inline-block;background:var(--yellow);border:3px solid var(--ink);border-radius:999px;padding:2px 18px}
+.card{background:var(--bg);border:3px solid var(--ink);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.hero{background:var(--sky);border:3px solid var(--ink);border-radius:32px;overflow:hidden;margin-top:12px}
+.hero svg{display:block;width:100%;height:auto}
+.sub{text-align:center;margin:0 0 12px}
+.cd{display:flex;gap:8px;justify-content:center;margin:10px 0}
+.cd div{flex:1;max-width:100px;border:3px solid var(--ink);border-radius:18px;padding:6px 4px;text-align:center;background:var(--yellow)}
+.cd b{display:block;font-size:26px;line-height:1.2}.cd span{font-size:13px}
+.msg{text-align:center;border:3px solid var(--ink);border-radius:18px;padding:10px;background:var(--green);margin:10px 0}
+.fl{display:flex;align-items:center;justify-content:space-between;gap:8px;text-align:center}
+.fl .c{font-size:30px;font-weight:700}.fl .t{font-size:20px}.fl small{display:block;font-size:13px}
+.fl .mid{flex:1;border-top:3px dashed var(--ink);position:relative;height:0;margin:0 4px}
+.fl .mid i{position:absolute;left:50%;top:-14px;transform:translateX(-50%);background:var(--bg);padding:0 4px;font-style:normal}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:13px}
+.chip{border:3px solid var(--ink);border-radius:999px;padding:0 10px;background:var(--bg)}
+.days{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin:0 -2px}
+.days button{flex:0 0 auto;font:inherit;color:var(--ink);background:var(--bg);border:3px solid var(--ink);border-radius:20px;padding:4px 14px;text-align:center;cursor:pointer;line-height:1.3}
+.days button small{display:block;font-size:12px}
+.days button[aria-selected=true]{background:var(--coral)}
+.dtitle{display:flex;align-items:center;gap:10px;margin:4px 0 14px}
+.dtitle svg{flex:0 0 64px;width:64px;height:64px;border:3px solid var(--ink);border-radius:20px;background:var(--green)}
+.dtitle h3{margin:0;font-size:20px;line-height:1.3}
+.tl{list-style:none;margin:0;padding:0 0 0 6px;position:relative}
+.tl::before{content:"";position:absolute;left:15px;top:8px;bottom:8px;border-left:3px dashed var(--ink)}
+.tl.pop .it{animation:pop .5s cubic-bezier(.3,1.6,.5,1) both}
+.tl.pop .it:nth-child(2){animation-delay:.06s}.tl.pop .it:nth-child(3){animation-delay:.12s}.tl.pop .it:nth-child(n+4){animation-delay:.18s}
+@keyframes pop{0%{transform:translateY(24px) scale(.9);opacity:0}100%{transform:none;opacity:1}}
+.it{position:relative;padding-left:34px;margin-bottom:12px}
+.it::before{content:"";position:absolute;left:5px;top:12px;width:18px;height:18px;border:3px solid var(--ink);border-radius:50%;background:var(--yellow)}
+.it.must::before{background:var(--coral)}
+.box{border:3px solid var(--ink);border-radius:20px;padding:8px 12px;background:var(--bg)}
+.it.must .box{background:#FDE9E4}
+.time{font-size:14px;font-weight:700}
+.name{font-size:17px;line-height:1.4}
+.note{font-size:14px;margin-top:2px}
+.tag{display:inline-block;border:3px solid var(--ink);border-radius:999px;padding:0 9px;font-size:13px;margin:4px 4px 0 0;line-height:1.5}
+.t-metro{background:var(--sky)}.t-jr{background:var(--coral)}.t-kin{background:var(--yellow)}.t-fly{background:var(--green)}.t-bus{background:#EBDDF3}
+.t-must{background:var(--coral);transform:rotate(-4deg)}
+.todo{list-style:none;margin:0;padding:0}
+.todo li{margin-bottom:8px}
+.todo label{display:flex;gap:12px;align-items:flex-start;cursor:pointer;border:3px solid var(--ink);border-radius:18px;padding:8px 12px;background:var(--bg)}
+.todo input{appearance:none;-webkit-appearance:none;flex:0 0 26px;width:26px;height:26px;border:3px solid var(--ink);border-radius:9px;background:var(--bg);margin:1px 0 0;cursor:pointer}
+.todo input:checked{background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M4 10l4 4 8-8' fill='none' stroke='%233E3A39' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat;animation:pop .4s cubic-bezier(.3,1.6,.5,1)}
+.todo input:checked+span{text-decoration:line-through;opacity:.6}
+.todo input:focus-visible{outline:3px dashed var(--ink);outline-offset:2px}
+.prog{font-size:14px;margin:-4px 0 10px}
+dl{margin:0}dt{font-size:13px;margin-top:8px}dd{margin:0;font-size:17px}
+footer{text-align:center;font-size:14px;padding:20px 0 28px}
+.f1{animation:fly 9s ease-in-out infinite alternate}
+.f2{animation:bob 4s ease-in-out infinite}
+.f3{animation:drift 14s linear infinite alternate}
+.f4{animation:spin 20s linear infinite;transform-origin:292px 40px;transform-box:view-box}
+@keyframes fly{from{transform:translate(-20px,6px)}to{transform:translate(30px,-8px)}}
+@keyframes bob{50%{transform:translateY(-4px)}}
+@keyframes drift{to{transform:translateX(30px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav aria-label="主選單"><div class="in"><a href="#top">首頁</a><a href="#flight">航班</a><a href="#plan">行程</a><a href="#todo">待辦</a><a href="#stay">住宿</a></div></nav>
+<main class="wrap" id="top">
+
+<div class="hero" role="img" aria-label="大阪城、特急 Haruka 列車與飛機的繪本插圖">
+<svg viewBox="0 0 360 230" xmlns="http://www.w3.org/2000/svg" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<g class="f4"><circle cx="292" cy="40" r="22" fill="#F6D27A"/></g>
+<g class="f3" fill="#FFFCF6"><path d="M30 60h56a14 14 0 000-28 18 18 0 00-34-4 16 16 0 00-22 32z"/><path d="M200 90h50a11 11 0 000-22 14 14 0 00-27-3 12 12 0 00-23 25z"/></g>
+<g class="f1"><path d="M110 40l46-6 14-14 8 2-8 14 18 2 4-6 6 1-3 10 3 10-6 1-4-6-18 2 8 14-8 2-14-14-46-6z" fill="#FFFCF6"/><circle cx="130" cy="38" r="2" fill="#3E3A39"/><circle cx="142" cy="37" r="2" fill="#3E3A39"/></g>
+<path d="M0 190h360v40H0z" fill="#B9DAA5"/>
+<g fill="#B9DAA5"><path d="M-10 190q40-40 80 0z"/><path d="M280 190q40-34 90 0z"/></g>
+<path d="M0 190h360" fill="none"/>
+<g><path d="M60 190v-22h110v22z" fill="#FFFCF6"/><path d="M70 168l10-14h80l10 14z" fill="#F2A497"/><path d="M90 154l8-14h54l8 14z" fill="#FFFCF6"/><path d="M82 140l22-16h44l22 16z" fill="#B9DAA5"/><path d="M112 124l12-14h24l12 14z" fill="#FFFCF6"/><path d="M100 110l24-18h24l24 18z" fill="#B9DAA5"/><path d="M128 92l10-14 10 14z" fill="#F6D27A"/><path d="M104 190v-14h24v14z" fill="#A8D3E6"/><path d="M120 108l-4-6M156 108l4-6" fill="none"/></g>
+<g class="f2"><path d="M190 214h140a10 10 0 0010-10v-22a14 14 0 00-14-14H210a20 20 0 00-20 20z" fill="#FFFCF6" transform="translate(0,-6)"/><path d="M190 190h150v10H190z" fill="#F2A497"/><rect x="204" y="170" width="26" height="14" rx="5" fill="#A8D3E6"/><rect x="240" y="170" width="26" height="14" rx="5" fill="#A8D3E6"/><rect x="276" y="170" width="26" height="14" rx="5" fill="#A8D3E6"/><circle cx="214" cy="212" r="7" fill="#F6D27A"/><circle cx="300" cy="212" r="7" fill="#F6D27A"/></g>
+<path d="M0 218h360" stroke-dasharray="10 8" fill="none"/>
+</svg></div>
+
+<h1>大阪・京都・奈良<br>五日小旅行</h1>
+<p class="sub">2026/7/30（四）— 8/3（一）</p>
+<div class="cd" id="cd" aria-live="polite"></div>
+<div class="msg" id="msg" hidden></div>
+
+<section id="flight"><h2>航班</h2>
+<div class="card"><div style="font-size:14px">去程・7/30（四）國泰 CX564</div>
+<div class="fl"><div><div class="c">TPE</div><div class="t">11:05</div><small>桃園 第一航站</small></div><div class="mid"><i>✈</i></div><div><div class="c">KIX</div><div class="t">14:50</div><small>關西 第一航站</small></div></div>
+<div class="chips"><span class="chip">經濟艙</span><span class="chip">波音 777-300</span><span class="chip">飛行 2:45</span><span class="chip">行李 1PC</span></div></div>
+<div class="card"><div style="font-size:14px">回程・8/3（一）國泰 CX565</div>
+<div class="fl"><div><div class="c">KIX</div><div class="t">16:15</div><small>關西 第一航站</small></div><div class="mid"><i>✈</i></div><div><div class="c">TPE</div><div class="t">18:15</div><small>桃園 第一航站</small></div></div>
+<div class="chips"><span class="chip">經濟艙</span><span class="chip">波音 777-300</span><span class="chip">飛行 3:00</span><span class="chip">行李 1PC</span></div>
+<div class="chips"><span class="chip" style="background:var(--yellow)">國泰訂位代號 E6TF7L</span></div></div>
+</section>
+
+<section id="plan"><h2>每日行程</h2>
+<div class="days" id="days" role="tablist" aria-label="選擇日期"></div>
+<div class="card" id="day"></div>
+</section>
+
+<section id="todo"><h2>待辦清單</h2>
+<div class="prog" id="prog"></div>
+<ul class="todo" id="todos"></ul>
+</section>
+
+<section id="stay"><h2>住宿</h2>
+<div class="card"><dl>
+<dt>入住</dt><dd>7/30（四）抵達大阪後，搭御堂筋線至心齋橋站</dd>
+<dt>退房</dt><dd>8/3（一）11:00 前出發前往關西機場</dd>
+<dt>飯店名稱・地址</dt><dd>行程資料中尚未提供，請之後補上</dd>
+<dt>早餐</dt><dd>8/3 可考慮加購飯店早餐</dd></dl></div>
+</section>
+<footer>おつかれさま、いってらっしゃい 🌸</footer>
+</main>
+
+<script>
+const T={metro:["地鐵","t-metro"],jr:["JR","t-jr"],kin:["近鐵","t-kin"],fly:["飛機/接送","t-fly"]};
+const D=[
+{d:"7/30",w:"四",n:"抵達大阪",ic:"plane",it:[
+{t:"07:05",h:"機場接送",s:"政大自強一二三宿舍出發",g:[["fly"]]},
+{t:"11:05",h:"桃園第一航站起飛",s:"CX564",g:[["fly"]]},
+{t:"14:50",h:"抵達關西機場 第一航站",s:"約 16:00 出關。入境後用 WEST QR 電子票，手機選位"},
+{t:"約 16:00",h:"JR Haruka：關西機場 → 大阪",s:"2F 鐵道搭乘。班次 16:14→17:01、16:43→17:31、17:16→18:01",g:[["jr","JR西日本 Haruka"]]},
+{t:"入住",h:"梅田 → 淀屋橋 → 心齋橋站",s:"飯店 Check in",g:[["metro","御堂筋線"]]},
+{t:"晚餐",h:"Shake Shack 大丸心齋橋店",s:""}]},
+{d:"7/31",w:"五",n:"梅田逛街",ic:"bag",it:[
+{t:"早上",h:"淀屋橋 → 梅田",s:"",g:[["metro","御堂筋線"]]},
+{t:"午餐",h:"Rojiura Curry SAMURAI 北海道湯咖哩",s:"Grand Front Osaka 南館 7F"},
+{t:"逛街",h:"Grand Front Osaka 無印良品",s:"南館 2F–4F"},
+{t:"逛街",h:"Umeda GU、UNIQLO、Daiso、Yodobashi Camera",s:"Yodobashi 5F 有扭蛋"},
+{t:"逛街",h:"LUCUA 1100",s:"3F @cosme、mont-bell"},
+{t:"逛街",h:"大丸百貨",s:"Pokémon Center、Nintendo"},
+{t:"景點",h:"阿倍野 HARUKAS 300 展望台",s:"",m:1},
+{t:"晚餐",h:"三選一：一蘭拉麵(?)、吉次梅田店、利久牛舌",s:"吉次在 Barchica03 四樓"},
+{t:"提醒",h:"任天堂博物館 QR code",s:"14:00 後會顯示，記得截圖"}]},
+{d:"8/1",w:"六",n:"任天堂博物館",ic:"gate",it:[
+{t:"09:00",h:"淀屋橋 → 梅田 → 京都",s:"約 1 小時",g:[["metro","御堂筋線"],["jr","JR A 大阪→京都"]]},
+{t:"上午",h:"任天堂京都店",s:"高島屋 7F，可以早上去"},
+{t:"12:00",h:"京都 → 小倉",s:"",g:[["jr","JR D 奈良線"]]},
+{t:"13:00–13:30",h:"任天堂博物館入場",s:"預約時段 8/1 13:00–13:30。QR code 在前一天 14:00 後顯示",m:1},
+{t:"傍晚",h:"小倉 → 稻荷",s:"",g:[["jr","JR D 奈良線"]]},
+{t:"晚餐",h:"京都車站 拉麵小路",s:"JR 京都站中央改札口出口左轉，搭京都大樓大階段手扶梯到 10F"},
+{t:"甜點",h:"中村藤吉本店",s:"JR 京都伊勢丹 3F"}]},
+{d:"8/2",w:"日",n:"奈良＋心齋橋",ic:"deer",it:[
+{t:"09:00",h:"北濱 → 日本橋",s:"共約 1 小時",g:[["metro","堺筋線"]]},
+{t:"早餐",h:"Shinpachi Shokudō 日式早餐",s:"日本橋 6 號出口"},
+{t:"出發",h:"近鐵日本橋 → 近鐵奈良",s:"",g:[["kin","近鐵奈良線"]]},
+{t:"上午",h:"奈良公園・東大寺・大佛布丁",s:"",m:1},
+{t:"13:00",h:"中谷堂 艾草紅豆麻糬",s:""},
+{t:"15:00",h:"回程：近鐵奈良 → 近鐵日本橋",s:"約 1 小時",g:[["kin","近鐵奈良線"]]},
+{t:"17:00",h:"晚餐：板前燒肉一斗",s:"東心斎橋店本館"}]},
+{d:"8/3",w:"一",n:"回家日",ic:"plane",it:[
+{t:"早上",h:"早餐",s:"可考慮加購飯店早餐"},
+{t:"早上",h:"少彥名神社",s:""},
+{t:"11:00 前",h:"一定要出發！",s:"淀屋橋 → 梅田約 30 分鐘",g:[["metro","御堂筋線"]]},
+{t:"出發",h:"JR Haruka：大阪 → 關西機場",s:"班次 11:02→11:50、11:32→12:20、12:02→12:50",g:[["jr","JR西日本 Haruka"]]},
+{t:"13:00",h:"抵達關西機場 第一航站",s:""},
+{t:"16:15",h:"CX565 起飛，18:15 抵達桃園",s:"",g:[["fly"]]}]}];
+const IC={
+plane:'<path d="M8 36l18-4 12-14 6 2-6 12 12 2 3-4 5 1-3 8 3 8-5 1-3-4-12 2 6 12-6 2-12-14-18-4z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>',
+bag:'<rect x="14" y="26" width="36" height="28" rx="6" fill="#F6D27A" stroke="#3E3A39" stroke-width="3"/><path d="M24 26v-6a8 8 0 0116 0v6" fill="none" stroke="#3E3A39" stroke-width="3"/>',
+gate:'<path d="M8 22h48M14 30h36" stroke="#3E3A39" stroke-width="4" stroke-linecap="round"/><path d="M18 22v30M46 22v30" stroke="#3E3A39" stroke-width="5" stroke-linecap="round"/><path d="M8 22h48v6H8z" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/>',
+deer:'<path d="M20 38h28v12H20z" fill="#F6D27A" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/><circle cx="46" cy="30" r="9" fill="#F6D27A" stroke="#3E3A39" stroke-width="3"/><path d="M42 22l-4-8M50 22l4-8M26 50v8M42 50v8" stroke="#3E3A39" stroke-width="3" stroke-linecap="round"/><circle cx="48" cy="29" r="1.6" fill="#3E3A39"/>'};
+const todos=[
+"入境後用 WEST QR 電子票，手機選位（7/30）",
+"確認 7/30 早上 7:05 機場接送",
+"7/31 14:00 後取得任天堂博物館 QR code 並截圖",
+"決定 8/3 要不要加購飯店早餐",
+"8/3 11:00 前出發前往關西機場（Haruka 11:02 / 11:32 / 12:02）",
+"檢查回程行李：每人 1PC"];
+const $=s=>document.querySelector(s);
+const tabs=$("#days"),box=$("#day");
+function show(i,anim){
+ [...tabs.children].forEach((b,j)=>b.setAttribute("aria-selected",i==j));
+ const x=D[i];
+ box.innerHTML=`<div class="dtitle"><svg viewBox="0 0 64 64" aria-hidden="true">${IC[x.ic]}</svg><h3>${x.d}（${x.w}）Day ${i+1}<br>${x.n}</h3></div><ol class="tl ${anim?"pop":""}">`+x.it.map(e=>`<li class="it${e.m?" must":""}"><div class="box"><div class="time">${e.t}</div><div class="name">${e.h}</div>${e.s?`<div class="note">${e.s}</div>`:""}<div>${(e.g||[]).map(g=>`<span class="tag ${T[g[0]][1]}">${g[1]||T[g[0]][0]}</span>`).join("")}${e.m?'<span class="tag t-must">必去</span>':""}</div></div></li>`).join("")+"</ol>";
+}
+D.forEach((x,i)=>{const b=document.createElement("button");b.role="tab";b.innerHTML=`${x.d}<small>${x.w}・Day ${i+1}</small>`;b.onclick=()=>{show(i,true);b.scrollIntoView({inline:"center",block:"nearest"})};tabs.appendChild(b)});
+show(0,false);
+/* 待辦 */
+let st={};try{st=JSON.parse(localStorage.getItem("osaka-todo")||"{}")}catch(e){}
+function prog(){const n=todos.filter((_,i)=>st[i]).length;$("#prog").textContent=`已完成 ${n} / ${todos.length}`}
+todos.forEach((t,i)=>{const li=document.createElement("li");li.innerHTML=`<label><input type="checkbox"${st[i]?" checked":""}><span>${t}</span></label>`;li.querySelector("input").onchange=e=>{st[i]=e.target.checked;try{localStorage.setItem("osaka-todo",JSON.stringify(st))}catch(_){}prog()};$("#todos").appendChild(li)});prog();
+/* 倒數 */
+const S=new Date("2026-07-30T11:05:00+08:00"),E=new Date("2026-08-03T18:15:00+08:00");
+function tick(){const n=new Date(),c=$("#cd"),m=$("#msg");
+ if(n<S){const d=S-n,D_=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5),mi=Math.floor(d%36e5/6e4),s=Math.floor(d%6e4/1e3);
+  c.innerHTML=[[D_,"天"],[h,"時"],[mi,"分"],[s,"秒"]].map(a=>`<div><b>${a[0]}</b><span>${a[1]}</span></div>`).join("");m.hidden=true}
+ else if(n<E){c.innerHTML="";m.hidden=false;m.textContent="旅行進行中，玩得開心！"}
+ else{const d=Math.floor((n-E)/864e5);c.innerHTML="";m.hidden=false;m.textContent=`旅程已結束，回來 ${d} 天了。一起翻翻回憶吧`}}
+tick();setInterval(tick,1000);
+</script>
+</body>
+</html>
